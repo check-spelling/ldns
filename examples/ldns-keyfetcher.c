@@ -1,6 +1,6 @@
 /*
  * ldns-keyfetcher retrieves the DNSKEYS for a certain domain
- * It traces the authoritatives nameservers down from the root
+ * It traces the authoritative nameservers down from the root
  * And uses TCP, to minimize spoofing danger.
  *
  * (c) NLnet Labs, 2006 - 2008
@@ -24,7 +24,7 @@ usage(FILE *fp, char *prog) {
 	fprintf(fp, "-4\t\tUse IPv4 only\n");
 	fprintf(fp, "-6\t\tUse IPv6 only\n");
 	fprintf(fp, "-h\t\tShow this help\n");
-	fprintf(fp, "-i\t\tInsecurer mode; don't do checks, just query for the keys\n");
+	fprintf(fp, "-i\t\tInsecure mode; don't do checks, just query for the keys\n");
 	fprintf(fp, "-r <file>\tUse file to read root hints from\n");
 	fprintf(fp, "-s\t\tDon't print the keys but store them in files\n\t\tcalled K<file>.+<alg>.+<keytag>.key\n");
 	fprintf(fp, "-v <int>\tVerbosity level (0-5, not verbose-very verbose)\n");
@@ -74,7 +74,7 @@ retrieve_dnskeys(ldns_resolver *local_res, ldns_rdf *name, ldns_rr_type t,
 	}
 
 	/* transfer some properties of local_res to res,
-	 * because they were given on the commandline */
+	 * because they were given on the command line */
 	ldns_resolver_set_ip6(res, 
 			ldns_resolver_ip6(local_res));
 	ldns_resolver_set_port(res, 
@@ -143,7 +143,7 @@ retrieve_dnskeys(ldns_resolver *local_res, ldns_rdf *name, ldns_rr_type t,
 		/* remove the old nameserver from the resolver */
 		while((pop = ldns_resolver_pop_nameserver(res))) { ldns_rdf_deep_free(pop); }
 
-		/* also check for new_nss emptyness */
+		/* also check for new_nss emptiness */
 
 		if (!new_nss_aaaa && !new_nss_a) {
 			/* 

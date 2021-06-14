@@ -121,7 +121,7 @@ AC_DEFUN([ACX_RSRC_VERSION],
 
 dnl Routine to help check for compiler flags.
 dnl Checks if the compiler will accept the flag.
-dnl $1: the flag without a - in front, so g to check -g.
+dnl $1: the flag without a - in fromt, so g to check -g.
 dnl $2: executed if yes
 dnl $3: executed if no
 AC_DEFUN([ACX_CHECK_COMPILER_FLAG], 
@@ -525,12 +525,12 @@ AC_DEFUN([AC_PROG_OBJC], [:])
 AC_DEFUN([AC_PROG_OBJCCPP], [:])
 AC_DEFUN([AC_LIBTOOL_CXX], [:])
 AC_DEFUN([AC_LIBTOOL_F77], [:])
-# always use ./libtool unless override from commandline (libtool=mylibtool)
+# always use ./libtool unless override from command line (libtool=mylibtool)
 if test -z "$libtool"; then
 	libtool="./libtool"
 fi
 AC_SUBST(libtool)
-# avoid libtool max commandline length test on systems that fork slowly.
+# avoid libtool max command line length test on systems that fork slowly.
 AC_CANONICAL_HOST
 if echo "$host_os" | grep "sunos4" >/dev/null; then
 	lt_cv_sys_max_cmd_len=32750;

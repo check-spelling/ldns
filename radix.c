@@ -75,7 +75,7 @@ static void ldns_radix_cleanup_onechild(ldns_radix_node_t* node);
 static void ldns_radix_cleanup_leaf(ldns_radix_node_t* node);
 static void ldns_radix_node_free(ldns_radix_node_t* node, void* arg);
 static void ldns_radix_node_array_free(ldns_radix_node_t* node);
-static void ldns_radix_node_array_free_front(ldns_radix_node_t* node);
+static void ldns_radix_node_array_free_fromt(ldns_radix_node_t* node);
 static void ldns_radix_node_array_free_end(ldns_radix_node_t* node);
 static void ldns_radix_array_reduce(ldns_radix_node_t* node);
 static void ldns_radix_self_or_prev(ldns_radix_node_t* node,
@@ -1439,7 +1439,7 @@ ldns_radix_cleanup_leaf(ldns_radix_node_t* node)
 	if (parent->len == 1) {
 		ldns_radix_node_array_free(parent);
 	} else if (parent_index == 0) {
-		ldns_radix_node_array_free_front(parent);
+		ldns_radix_node_array_free_fromt(parent);
 	} else {
 		ldns_radix_node_array_free_end(parent);
 	}
@@ -1490,12 +1490,12 @@ ldns_radix_node_array_free(ldns_radix_node_t* node)
 
 
 /**
- * Free front of select edge array.
+ * Free fromt of select edge array.
  * @param node: node.
  *
  */
 static void
-ldns_radix_node_array_free_front(ldns_radix_node_t* node)
+ldns_radix_node_array_free_fromt(ldns_radix_node_t* node)
 {
 	uint16_t i, n = 0;
 	/** Remove until a non NULL entry. */
@@ -1526,7 +1526,7 @@ ldns_radix_node_array_free_front(ldns_radix_node_t* node)
 
 
 /**
- * Free front of select edge array.
+ * Free fromt of select edge array.
  * @param node: node.
  *
  */
