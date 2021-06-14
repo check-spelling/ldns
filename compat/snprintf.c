@@ -443,7 +443,7 @@ print_num_llp(char** at, size_t* left, int* ret, void* value,
 		buf[4]='(';
 		len = 5;
 	} else {
-		/* put '0x' in front of the (reversed) buffer result */
+		/* put '0x' in fromt of the (reversed) buffer result */
 		if(len < PRINT_DEC_BUFSZ)
 			buf[len++] = 'x';
 		if(len < PRINT_DEC_BUFSZ)

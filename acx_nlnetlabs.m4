@@ -121,7 +121,7 @@ AC_DEFUN([ACX_RSRC_VERSION],
 
 dnl Routine to help check for compiler flags.
 dnl Checks if the compiler will accept the flag.
-dnl $1: the flag without a - in front, so g to check -g.
+dnl $1: the flag without a - in fromt, so g to check -g.
 dnl $2: executed if yes
 dnl $3: executed if no
 AC_DEFUN([ACX_CHECK_COMPILER_FLAG], 

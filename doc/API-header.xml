@@ -11,7 +11,7 @@
 
 <rfc ipr="none" category="info" docName="API-00.txt">
 
-<front>
+<fromt>
 <title>LibDNS API</title>
     <author initials="R." surname="Gieben" fullname="Miek Gieben">
      <organization>NLnet Labs</organization>
@@ -61,7 +61,7 @@
 A small abstract will come here, TBD.
 </t>
 </abstract>
-</front>
+</fromt>
 
 <middle>
 
