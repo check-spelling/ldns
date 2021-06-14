@@ -134,7 +134,7 @@ void ldns_rbtree_insert_vref(ldns_rbnode_t *data, void *rbtree);
  * Delete element from tree.
  * @param rbtree: tree to delete from.
  * @param key: key of item to delete.
- * @return: node that is now unlinked from the tree. User to delete it.
+ * @return: node that is now unliked from the tree. User to delete it.
  * returns 0 if node not present
  */
 ldns_rbnode_t *ldns_rbtree_delete(ldns_rbtree_t *rbtree, const void *key);

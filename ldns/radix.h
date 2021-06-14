@@ -132,7 +132,7 @@ ldns_status ldns_radix_insert(ldns_radix_t* tree, uint8_t* key,
  * @param tree: tree to insert to.
  * @param key:  key.
  * @param len:  length of key.
- * @return: unlinked data or NULL if not present.
+ * @return: unliked data or NULL if not present.
  *
  */
 void* ldns_radix_delete(ldns_radix_t* tree, const uint8_t* key, radix_strlen_t len);
